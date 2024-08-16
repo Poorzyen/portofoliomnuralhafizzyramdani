@@ -895,6 +895,48 @@ section:nth-child(odd) .animate.scroll,
     }
 }
 
+.footer-sci {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-sci .sci-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: .5s;
+}
+
+.footer-sci .sci-icon:hover {
+    color: var(--bg-color);
+}
+
+.footer-sci .sci-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-sci .sci-icon:hover::before {
+    width: 100%;
+}
+
+
 @media (max-width: 371px) {
     .home {
         justify-content: center;
